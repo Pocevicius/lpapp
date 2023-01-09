@@ -1,0 +1,16 @@
+.main {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+.header {
+  height: 100px;
+  width: 100%;
+  background-color: rgb(130, 76, 103);
+}
+
+.footer {
+  height: 100px;
+  width: 100%;
+  background-color: goldenrod;
+}
