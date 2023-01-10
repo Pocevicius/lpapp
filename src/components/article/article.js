@@ -1,15 +1,20 @@
 import React from "react";
 import styles from "./article.module.css";
+import { useNavigate } from "react-router-dom";
 
-const article = ({ article }) => {
-  console.log(article);
+const Article = ({ article }) => {
+  const navigate = useNavigate();
+
+  const onClickComponent = () => {
+    navigate(`/currency/${article.id}`);
+  };
 
   return (
-    <header className={styles.main}>
-      <img className={styles.image} alt="girl-img" src={article.imageSrc} />
-      <h1 className={styles.title}>{article.title}</h1>
-    </header>
+    <div onClick={() => onClickComponent()} className={styles.main}>
+      <img className={styles.image} alt="news-img" src={article.image} />
+      <h1 className={styles.title}>{article.name}</h1>
+    </div>
   );
 };
 
-export default article;
+export default Article;
