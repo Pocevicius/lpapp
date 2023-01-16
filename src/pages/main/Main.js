@@ -28,10 +28,7 @@ const App = () => {
   }, [title]);
 
   return (
-    <div
-      className={styles.main}
-      onClick={() => setTitle("trigubo x sugrizimas")}
-    >
+    <div className={styles.main}>
       <Navbar />
       <MainBody
         articleTitle={title}
